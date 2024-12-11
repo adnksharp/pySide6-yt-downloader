@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGroupBox, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QTabWidget, QTextEdit,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QLabel,
+    QLineEdit, QPushButton, QSizePolicy, QTabWidget,
+    QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -44,6 +44,7 @@ class Ui_Widget(object):
 
         self.download = QPushButton(self.tab)
         self.download.setObjectName(u"download")
+        self.download.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
         self.verticalLayout.addWidget(self.download)
 
@@ -112,13 +113,38 @@ class Ui_Widget(object):
 
         self.verticalLayout_5.addWidget(self.lineEdit_2)
 
+        self.label_2 = QLabel(self.groupBox_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.verticalLayout_5.addWidget(self.label_2)
+
+        self.comboBox = QComboBox(self.groupBox_2)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.setObjectName(u"comboBox")
+
+        self.verticalLayout_5.addWidget(self.comboBox)
+
 
         self.verticalLayout_6.addWidget(self.groupBox_2)
 
 
         self.retranslateUi(Widget)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Widget)
@@ -135,5 +161,22 @@ class Ui_Widget(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("Widget", u"csv", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("Widget", u"Configuraci\u00f3n de guardado", None))
         self.label.setText(QCoreApplication.translate("Widget", u"Carpeta:", None))
+        self.label_2.setText(QCoreApplication.translate("Widget", u"Formato:", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("Widget", u"m4a", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("Widget", u"best*", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("Widget", u"bestvideo*", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("Widget", u"bestaudio*", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("Widget", u"3gp", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("Widget", u"aac", None))
+        self.comboBox.setItemText(6, QCoreApplication.translate("Widget", u"flv", None))
+        self.comboBox.setItemText(7, QCoreApplication.translate("Widget", u"mp4", None))
+        self.comboBox.setItemText(8, QCoreApplication.translate("Widget", u"mp3", None))
+        self.comboBox.setItemText(9, QCoreApplication.translate("Widget", u"ogg", None))
+        self.comboBox.setItemText(10, QCoreApplication.translate("Widget", u"wav", None))
+        self.comboBox.setItemText(11, QCoreApplication.translate("Widget", u"webm", None))
+        self.comboBox.setItemText(12, QCoreApplication.translate("Widget", u"worst*", None))
+        self.comboBox.setItemText(13, QCoreApplication.translate("Widget", u"worstvideo*", None))
+        self.comboBox.setItemText(14, QCoreApplication.translate("Widget", u"worstaudio*", None))
+
     # retranslateUi
 

@@ -26,7 +26,7 @@
       <item>
        <widget class="QTabWidget" name="tabWidget">
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -38,6 +38,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="download">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Descargar</string>
             </property>
@@ -133,6 +136,92 @@
         <property name="readOnly">
          <bool>true</bool>
         </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Formato:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>m4a</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>best*</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>bestvideo*</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>bestaudio*</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3gp</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>aac</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>flv</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mp4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>mp3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ogg</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>wav</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>webm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>worst*</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>worstvideo*</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>worstaudio*</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
