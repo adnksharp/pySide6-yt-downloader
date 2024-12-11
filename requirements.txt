@@ -1,1 +1,8 @@
 PySide6
+sys
+os
+re
+csv
+yt_dlp
+urllib
+PySide6
