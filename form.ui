@@ -58,6 +58,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="search">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Buscar</string>
             </property>
@@ -71,9 +74,9 @@
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QLineEdit" name="lineEdit">
+           <widget class="QPushButton" name="getf">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -81,10 +84,13 @@
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
-            <property name="frame">
+            <property name="autoFillBackground">
              <bool>true</bool>
             </property>
-            <property name="readOnly">
+            <property name="text">
+             <string>Abrir archivo</string>
+            </property>
+            <property name="flat">
              <bool>true</bool>
             </property>
            </widget>
@@ -120,21 +126,12 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
+       <widget class="QPushButton" name="chd">
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
-        <property name="frame">
-         <bool>true</bool>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
+        <property name="text">
+         <string>Cambiar ubicación</string>
         </property>
        </widget>
       </item>
@@ -147,6 +144,9 @@
       </item>
       <item>
        <widget class="QComboBox" name="comboBox">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <item>
          <property name="text">
           <string>m4a</string>

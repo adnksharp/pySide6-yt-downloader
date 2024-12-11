@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QLabel,
-    QLineEdit, QPushButton, QSizePolicy, QTabWidget,
-    QTextEdit, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QTabWidget, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_Widget(object):
     def setupUi(self, Widget):
@@ -60,6 +60,7 @@ class Ui_Widget(object):
 
         self.search = QPushButton(self.tab_2)
         self.search.setObjectName(u"search")
+        self.search.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
         self.verticalLayout_2.addWidget(self.search)
 
@@ -68,18 +69,18 @@ class Ui_Widget(object):
         self.tab_3.setObjectName(u"tab_3")
         self.verticalLayout_3 = QVBoxLayout(self.tab_3)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.lineEdit = QLineEdit(self.tab_3)
-        self.lineEdit.setObjectName(u"lineEdit")
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.getf = QPushButton(self.tab_3)
+        self.getf.setObjectName(u"getf")
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy)
-        self.lineEdit.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.lineEdit.setFrame(True)
-        self.lineEdit.setReadOnly(True)
+        sizePolicy.setHeightForWidth(self.getf.sizePolicy().hasHeightForWidth())
+        self.getf.setSizePolicy(sizePolicy)
+        self.getf.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.getf.setAutoFillBackground(True)
+        self.getf.setFlat(True)
 
-        self.verticalLayout_3.addWidget(self.lineEdit)
+        self.verticalLayout_3.addWidget(self.getf)
 
         self.download_2 = QPushButton(self.tab_3)
         self.download_2.setObjectName(u"download_2")
@@ -103,15 +104,11 @@ class Ui_Widget(object):
 
         self.verticalLayout_5.addWidget(self.label)
 
-        self.lineEdit_2 = QLineEdit(self.groupBox_2)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        sizePolicy.setHeightForWidth(self.lineEdit_2.sizePolicy().hasHeightForWidth())
-        self.lineEdit_2.setSizePolicy(sizePolicy)
-        self.lineEdit_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.lineEdit_2.setFrame(True)
-        self.lineEdit_2.setReadOnly(True)
+        self.chd = QPushButton(self.groupBox_2)
+        self.chd.setObjectName(u"chd")
+        self.chd.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
-        self.verticalLayout_5.addWidget(self.lineEdit_2)
+        self.verticalLayout_5.addWidget(self.chd)
 
         self.label_2 = QLabel(self.groupBox_2)
         self.label_2.setObjectName(u"label_2")
@@ -135,6 +132,7 @@ class Ui_Widget(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
+        self.comboBox.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
         self.verticalLayout_5.addWidget(self.comboBox)
 
@@ -157,10 +155,12 @@ class Ui_Widget(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("Widget", u"url", None))
         self.search.setText(QCoreApplication.translate("Widget", u"Buscar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("Widget", u"Buscar", None))
+        self.getf.setText(QCoreApplication.translate("Widget", u"Abrir archivo", None))
         self.download_2.setText(QCoreApplication.translate("Widget", u"Descargar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("Widget", u"csv", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("Widget", u"Configuraci\u00f3n de guardado", None))
         self.label.setText(QCoreApplication.translate("Widget", u"Carpeta:", None))
+        self.chd.setText(QCoreApplication.translate("Widget", u"Cambiar ubicaci\u00f3n", None))
         self.label_2.setText(QCoreApplication.translate("Widget", u"Formato:", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("Widget", u"m4a", None))
         self.comboBox.setItemText(1, QCoreApplication.translate("Widget", u"best*", None))
